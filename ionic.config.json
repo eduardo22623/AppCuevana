@@ -1,0 +1,7 @@
+{
+  "name": "AppCuevana",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
