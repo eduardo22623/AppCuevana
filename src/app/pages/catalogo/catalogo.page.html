@@ -1,0 +1,28 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="black">
+    <ion-title style="color: #3dc2ff; font-weight: bold; font-size: 24px;">
+      CUEVANA <span style="color: white; font-size: 14px;">MÓVIL</span>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button color="light"><ion-icon name="search"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="black">
+  <h2 style="color: white; margin-left: 15px;">Estrenos</h2>
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" size-md="4" *ngFor="let p of peliculas">
+        <ion-card button [routerLink]="['/detalle', p.id]" style="margin: 0; background: transparent; box-shadow: none;">
+          <img [src]="p.image.medium" style="border-radius: 8px;">
+          <ion-card-header style="padding: 5px 0;">
+            <ion-card-subtitle style="color: #3dc2ff;">{{ p.rating.average || 7.5 }} ★</ion-card-subtitle>
+            <ion-card-title style="color: white; font-size: 14px;">{{ p.name }}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

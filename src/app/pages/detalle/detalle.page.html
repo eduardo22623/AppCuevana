@@ -1,0 +1,35 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar color="translucent" style="position: absolute; top: 0;">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/catalogo" color="light"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="black" *ngIf="pelicula">
+  <div class="poster-container" style="position: relative;">
+    <img [src]="pelicula.image.original" style="width: 100%; mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+    <div class="play-btn" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+      <ion-icon name="play-circle" style="font-size: 80px; color: #3dc2ff; opacity: 0.9;"></ion-icon>
+    </div>
+  </div>
+
+  <div class="info" style="padding: 15px;">
+    <h1 style="color: white; font-weight: bold;">{{ pelicula.name }}</h1>
+    
+    <ion-chip color="primary" outline="true">
+      <ion-label>{{ pelicula.genres[0] }}</ion-label>
+    </ion-chip>
+    <ion-chip color="light" outline="true">
+      <ion-label>{{ pelicula.premiered | date:'yyyy' }}</ion-label>
+    </ion-chip>
+
+    <p style="color: #bbb; line-height: 1.5; margin-top: 20px;">
+      <span [innerHTML]="pelicula.summary"></span>
+    </p>
+
+    <ion-button expand="block" color="primary" style="margin-top: 30px;">
+      VER AHORA
+    </ion-button>
+  </div>
+</ion-content>

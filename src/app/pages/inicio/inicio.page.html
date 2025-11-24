@@ -1,0 +1,30 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="dark">
+    <ion-title>Proyecto Final</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding intro-bg">
+  <div class="container">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/Person_icon_BLACK-01.svg" alt="Avatar" style="width: 100px; filter: invert(1);">
+    
+    <h1>Datos del Alumno</h1>
+    <ion-card color="medium">
+      <ion-card-header>
+        <ion-card-title>Jorge Eduardo Sanchez Esteban</ion-card-title>
+        <ion-card-subtitle>Ingeniería en gestion y desarrollo de software</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p><strong>Materia:</strong> Desarrollo Móvil Integral</p>
+        <p><strong>Grado:</strong> 1001</p>
+        <p><strong>Proyecto:</strong> Cuevana</p>
+      </ion-card-content>
+    </ion-card>
+
+    <br>
+    <ion-button expand="block" color="primary" routerLink="/catalogo">
+      INGRESAR A LA APP
+      <ion-icon slot="end" name="arrow-forward"></ion-icon>
+    </ion-button>
+  </div>
+</ion-content>
